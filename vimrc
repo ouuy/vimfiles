@@ -10,6 +10,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set encoding=utf-8
+
 colo molokai
 set tabstop=4
 set cindent shiftwidth=4    
@@ -27,17 +29,19 @@ let g:pydiction_location = '~/.vim/complete-dict'
 """""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""
+" not to use the fancy arrow characters
+let g:NERDTreeDirArrows=0
 let NERDTreeIgnore=['.*\.o$','.*\.ko$']
 :map <F9> <Esc>:NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Taglist
 """""""""""""""""""""""""""""""""""""""""""""""""
-let Tlist_Show_One_File = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth = 40
-:map <F10> <Esc>:TlistToggle<CR>
+"let Tlist_Show_One_File = 1
+"let Tlist_Exit_OnlyWindow = 1
+"let Tlist_Use_Right_Window = 1
+"let Tlist_WinWidth = 40
+:map <F10> <Esc>:TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " NeoComplCache
