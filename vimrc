@@ -38,7 +38,9 @@ set cindent shiftwidth=4
 " GUI
 " -----------------------------------------------------------------------------
 if has("gui_running")
-"	set guifont=Bitstream_Vera_Sans_Mono:h10 ",Microsoft_YaHei_Mono:h11
+	if s:running_windows
+		set guifont=Bitstream_Vera_Sans_Mono:h10 ",Microsoft_YaHei_Mono:h11
+	endif
 	set guioptions-=T " no toolbar 
 	set guioptions-=m " no menus
 	set guioptions-=L " no scrollbar on left
