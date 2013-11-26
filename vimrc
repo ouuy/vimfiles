@@ -9,7 +9,7 @@ execute pathogen#infect()
 " -----------------------------------------------------------------------------
 " General
 " -----------------------------------------------------------------------------
-syntax on
+syntax on " 使能语法高亮
 filetype plugin indent on
 
 " -----------------------------------------------------------------------------
@@ -53,6 +53,9 @@ runtime init-neo.vim " 配置项较多，载入外部配置脚本
 "let Tlist_Use_Right_Window = 1
 "let Tlist_WinWidth = 40
 
+" tagbar
+let g:tagbar_iconchars=['+', '-'] " 自定义 arrow 符号，避免乱码
+
 "let g:pydiction_location = '~/.vim/complete-dict'
 "defalut g:pydiction_menu_height == 15
 "let g:pydiction_menu_height = 20 
@@ -60,19 +63,19 @@ runtime init-neo.vim " 配置项较多，载入外部配置脚本
 " -----------------------------------------------------------------------------
 " Mappings
 " -----------------------------------------------------------------------------
-map <silent><F9> <Esc>:NERDTreeToggle<CR>
-map <silent><F10> <Esc>:TagbarToggle<CR>
+noremap <silent><F9> <Esc>:NERDTreeToggle<CR>
+noremap <silent><F10> <Esc>:TagbarToggle<CR>
 
-map <F5> <Esc>:res -1<CR>
-map <F6> <ESC>:res +1<CR>
-map <F2> <Esc>\be
-map <C-F12> <Esc>:%!xxd<CR>
+noremap <F5> <Esc>:res -1<CR>
+noremap <F6> <ESC>:res +1<CR>
+noremap <F2> <Esc>\be
+noremap <C-F12> <Esc>:%!xxd<CR>
 
 " 定义窗口跳转快捷键
-map <silent><C-j> <C-W>j
-map <silent><C-k> <C-W>k
-map <silent><C-h> <C-W>h
-map <silent><C-l> <C-W>l
+noremap <silent><C-j> <C-W>j
+noremap <silent><C-k> <C-W>k
+noremap <silent><C-h> <C-W>h
+noremap <silent><C-l> <C-W>l
 
 " -----------------------------------------------------------------------------
 " Misc
