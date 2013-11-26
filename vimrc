@@ -1,5 +1,14 @@
 
-set nocompatible
+let s:running_windows = has("win16") || has("win32") || has("win64")
+
+" -----------------------------------------------------------------------------
+" Windows
+" -----------------------------------------------------------------------------
+if s:running_windows
+	source $VIMRUNTIME/vimrc_example.vim
+	source $VIMRUNTIME/mswin.vim
+	behave mswin
+endif
 
 " -----------------------------------------------------------------------------
 " pathogen add plugins
@@ -9,6 +18,7 @@ execute pathogen#infect()
 " -----------------------------------------------------------------------------
 " General
 " -----------------------------------------------------------------------------
+set nocompatible
 syntax on " 使能语法高亮
 filetype plugin indent on
 
