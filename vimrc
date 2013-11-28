@@ -26,7 +26,7 @@ filetype plugin indent on
 " UI
 " -----------------------------------------------------------------------------
 colorscheme molokai
-set encoding=utf-8
+" set encoding=utf-8 " 设置此选项会导致 windows menus 乱码
 set nu " 显示行号        
 set fencs=utf-8,gbk " 设置文件编码格式
 set t_Co=256 " 支持 256 色显示
@@ -39,7 +39,8 @@ set cindent shiftwidth=4
 " -----------------------------------------------------------------------------
 if has("gui_running")
 	if s:running_windows
-		set guifont=Bitstream_Vera_Sans_Mono:h10 ",Microsoft_YaHei_Mono:h11
+		" set guifont=Bitstream_Vera_Sans_Mono:h10
+		set guifont=Microsoft_YaHei_Mono:h11
 	endif
 	set guioptions-=T " no toolbar 
 	set guioptions-=m " no menus

@@ -22,3 +22,6 @@
 [submodule "bundle/grep"]
 	path = bundle/grep
 	url = https://github.com/yegappan/grep.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
