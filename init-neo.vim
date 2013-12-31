@@ -51,3 +51,17 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+if !exists('g:neocomplcache_dictionary_patterns')
+	  let g:neocomplcache_dictionary_patterns = {}
+endif
+
+" works well for the pydiction.vim dictionary file(complete-dict)
+let g:neocomplcache_dictionary_patterns.python = '\(\h\w*[.(]\?\)\+'
